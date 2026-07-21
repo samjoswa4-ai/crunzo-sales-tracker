@@ -1,95 +1,326 @@
+.shop-page {
+  background: #111;
+  min-height: 100vh;
+  padding: 16px 16px 92px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-header {
+  text-align: center;
+  padding: 8px 0 4px;
+}
+
+.app-header h1 {
+  color: #ffd600;
+  font-size: 30px;
+  margin: 0;
+}
+
+.app-header p {
+  margin: 4px 0 0;
+  color: #ddd;
+  font-size: 13px;
+}
+
+.screen-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-search-box {
+  margin-bottom: 4px;
+}
+
+.mobile-search-input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 999px;
+  border: 2px solid #ffd600;
+  background: #1a1a1a;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+  min-height: 48px;
+}
+
+.mobile-search-input::placeholder {
+  color: #bbb;
+}
+
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-  margin-bottom: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 8px;
 }
+
 .menu-card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 14px;
+  border: 2px solid #ffd600;
+  border-radius: 14px;
+  padding: 12px;
   text-align: center;
+  background: #222;
+  color: white;
+  min-height: 220px;
 }
+
+.menu-card h3 {
+  color: #ffd600;
+  font-size: 15px;
+  margin: 8px 0 4px;
+}
+
 .qty-control {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
+
 .qty-control button {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid #ccc;
-  background: white;
-  font-size: 16px;
+  background: #ffd600;
+  font-size: 20px;
   cursor: pointer;
+  font-weight: bold;
+  color: #111;
 }
-.summary {
+
+.summary,
+.report-section {
   padding: 14px;
   background: #222;
-  color:white;
-  border:2px solid #ffd600;
-  border-radius: 10px;
+  color: white;
+  border: 2px solid #ffd600;
+  border-radius: 14px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.summary h2 {
   font-size: 18px;
+  margin-top: 0;
+  color: #ffd600;
 }
-.menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
-  margin-bottom: 20px;
-}
-.menu-card {
-  border: 1px solid #ddd;
+
+.summary button {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border: none;
   border-radius: 10px;
-  padding: 14px;
-  text-align: center;
+  background: #ffd600;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
 }
-.qty-control {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.complete-order-btn {
+  margin-top: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.bill-section {
+  text-align: left;
+}
+
+.sticky-bill {
+  position: sticky;
+  bottom: 76px;
+  z-index: 2;
+}
+
+.bill-header,
+.bill-row,
+.bill-grand-total {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 1fr;
   gap: 10px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #444;
+  font-size: 14px;
+}
+
+.bill-header {
+  font-weight: bold;
+  color: #ffd600;
+  border-bottom: 1px solid #ffd600;
+}
+
+.bill-grand-total {
+  font-size: 16px;
+  border-bottom: none;
   margin-top: 8px;
 }
-.qty-control button {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  background: white;
+
+.order-search {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 10px;
+  border: 1px solid #ffd600;
+  margin-bottom: 12px;
+  background: #111;
+  color: white;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.order-history-card {
+  background: #1a1a1a;
+  border: 1px solid #ffd600;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.order-history-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  color: #ffd600;
+  font-size: 14px;
+}
+
+.order-items-list {
+  margin: 8px 0;
+}
+
+.month-picker {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #ffd600;
+  width: 100%;
+}
+
+.month-picker input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ffd600;
+  background: #111;
+  color: white;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.report-card,
+.history-card {
+  background: #1a1a1a;
+  border: 1px solid #ffd600;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.dashboard-card {
+  background: linear-gradient(135deg, #2a2a2a, #1b1b1b);
+  border: 1px solid #ffd600;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dashboard-card span {
+  color: #ffd600;
+  font-size: 12px;
+}
+
+.dashboard-card strong {
   font-size: 16px;
-  cursor: pointer;
+  color: white;
 }
-.shop-page{
-    background: #111;
-    min-height:100vh;
-    padding:30px;
-    color:white;
-    text-align:center;
+
+.wide-card {
+  grid-column: span 2;
 }
-.shop-page h1 {
-    color:#ffd600;
-    font-size:40px;
+
+.compact-summary {
+  padding-top: 12px;
 }
-.menu-card {
-    background:#222;
-    border:2px solid #ffd600;
-    color:white;
+
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #1a1a1a;
+  border-top: 2px solid #ffd600;
+  padding: 8px 6px calc(8px + env(safe-area-inset-bottom));
+  gap: 6px;
+  z-index: 10;
 }
-.menu-card h3 {
-    color:#ffd600;
+
+.bottom-nav button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 6px;
+  background: #222;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
 }
-.qty-control button {
-    background: #ffd600;
-    color: none;
-    font-weight: bold;
+
+.bottom-nav button.active {
+  background: #ffd600;
+  color: #111;
 }
+
+.no-items-found {
+  grid-column: 1 / -1;
+  padding: 20px;
+  text-align: center;
+  color: #ffd600;
+  background: #1a1a1a;
+  border: 1px dashed #ffd600;
+  border-radius: 10px;
+}
+
 .food-image {
-    width:100%;
-    height:150px;
-    object-fit:cover;
-    border-radius:10px;
-    margin-bottom:10px;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
