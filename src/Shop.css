@@ -196,6 +196,11 @@
   text-align: left;
 }
 
+.cancelled-order {
+  border-color: #ff6b6b;
+  opacity: 0.85;
+}
+
 .order-history-top {
   display: flex;
   justify-content: space-between;
@@ -205,8 +210,96 @@
   font-size: 14px;
 }
 
+.order-status-pill {
+  display: inline-block;
+  margin: 6px 0 8px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.order-status-pill.active {
+  background: #1e7e34;
+  color: white;
+}
+
+.order-status-pill.cancelled {
+  background: #a94442;
+  color: white;
+}
+
 .order-items-list {
   margin: 8px 0;
+}
+
+.order-action-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.order-action-btn,
+.save-edit-btn,
+.cancel-edit-btn,
+.remove-item-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.order-action-btn.edit-btn,
+.save-edit-btn {
+  background: #ffd600;
+  color: #111;
+}
+
+.order-action-btn.cancel-btn,
+.cancel-edit-btn,
+.remove-item-btn {
+  background: #a94442;
+  color: white;
+}
+
+.order-edit-panel {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.edit-order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-top: 1px solid #444;
+}
+
+.edit-order-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.edit-order-controls button {
+  border: none;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  background: #ffd600;
+  color: #111;
+  cursor: pointer;
+}
+
+.order-edit-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .month-picker {
